@@ -11,3 +11,7 @@
     * HTML, CSS focused +Basic JS
     * Generate Cat: Generates Cat images in a ppleasable and formattted containers.
       ![Generate Cats](/images/catgenerator.png)
+* **Challenge 3: Rock, Paper and Scissors Game - Intermediate Level**
+   * HTML,CSS + More focus on JS
+   * User chooses among stone, paper or scissors and then system makes a random choice; after which result is displayed
+     ![Rock, Paper & Scissors](/images/Rock,paper,scissors game.PNG)
