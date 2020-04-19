@@ -15,3 +15,7 @@
    * HTML,CSS + More focus on JS
    * User chooses among stone, paper or scissors and then system makes a random choice; after which result is displayed
      ![Rock, Paper & Scissors](/images/Rock_paper_scissors_game.PNG)
+* **Challenge 4: Change Button colors - Intermediate Level**
+   * HTML,CSS + More focus on JS
+   * User chooses from dropdown the final color of buttons
+     ![Change button colors](/images/changeButtonColors.png)
