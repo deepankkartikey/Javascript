@@ -102,7 +102,7 @@ for(let i=0; i<all_buttons.length; i++){
     copyAllButtons.push(all_buttons[i].classList[1]);
 }
 
-function buttonColorChange(buttonThingy){
+let buttonColorChange = buttonThingy => {
     if(buttonThingy.value === 'red'){
         buttonsRed();
     } else if(buttonThingy.value === 'green'){
@@ -114,28 +114,28 @@ function buttonColorChange(buttonThingy){
     }
 }
 
-function buttonsRed(){
+let buttonsRed = () => {
     for(let i=0; i<all_buttons.length; i++){
         all_buttons[i].classList.remove(all_buttons[i].classList[1]);
         all_buttons[i].classList.add('btn-danger');
     }
 }
 
-function buttonsGreen(){
+let buttonsGreen = () => {
     for(let i=0; i<all_buttons.length; i++){
         all_buttons[i].classList.remove(all_buttons[i].classList[1]);
         all_buttons[i].classList.add('btn-success');
     }
 }
 
-function buttonsColorReset(){
+let buttonsColorReset = () => {
     for(let i=0; i<all_buttons.length; i++){
         all_buttons[i].classList.remove(all_buttons[i].classList[1]);
         all_buttons[i].classList.add(copyAllButtons[i]);
     }
 }
 
-function buttonsColorRandom(){
+let buttonsColorRandom = () => {
     let choices = ['btn-primary','btn-danger','btn-success','btn-warning'];
     for(let i=0; i<all_buttons.length; i++){
         let randomInt = Math.floor(Math.random()*4);
@@ -182,12 +182,12 @@ function blackjackHit(){
     }
 }
 
-function randomCard(){
+let randomCard = () => {
     let randomIndex = Math.floor(Math.random()*13);
     return CARDS[randomIndex];
 }
 
-function showCard(card,activePlayer){
+let showCard = (card,activePlayer) => {
     if(activePlayer['score']<=21){
         let cardImage = document.createElement('img');
         cardImage.src = `static/images/${card}.png`;
@@ -230,7 +230,7 @@ function blackjackDeal(){
     }
 }
 
-function updateScore(card, activePlayer){
+let updateScore = (card, activePlayer) => {
 
     if(card === 'A'){
         newScore = activePlayer['score']+blackjackGame['cardsMap'][card][1];
@@ -248,7 +248,7 @@ function updateScore(card, activePlayer){
     }  
 }
 
-function showScore(activePlayer){
+let showScore = (activePlayer) => {
     if(activePlayer['score']>21){
         document.querySelector(activePlayer['scoreSpan']).textContent='BUST!';
         document.querySelector(activePlayer['scoreSpan']).style.color='red';
@@ -258,9 +258,7 @@ function showScore(activePlayer){
     }
 }
 
-function sleep(ms){
-    return new Promise(resolve => setTimeout(resolve,ms));
-}
+let sleep = ms => new Promise(resolve => setTimeout(resolve,ms))
 
 async function dealerLogic(){
     blackjackGame['isStand']=true;
@@ -281,7 +279,7 @@ async function dealerLogic(){
 
 // compute WINNER method
 // update wins, losses, draws
-function computeWinner(){
+let computeWinner = () => {
     let winner;
 
     if(YOU['score']<=21){
@@ -318,7 +316,7 @@ function computeWinner(){
     return winner;
 }
         
-function showResult(winner){
+let showResult = (winner) => {
     let message, messageColor;
 
     if(blackjackGame['isTurnsOver']===true){
@@ -344,35 +342,3 @@ function showResult(winner){
         document.querySelector('#blackjack-result').style.color=messageColor;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
