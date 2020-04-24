@@ -1,5 +1,5 @@
 // CHALLENGE 1: YOUR AGE IN DAYS
-function calculateAgeInDays(){
+let calculateAgeInDays = () => {
     var birthYear = prompt('Enter Birth year: ');
     var ageInDays = (2020-birthYear)*365;
     var h1 = document.createElement('h1');
@@ -9,13 +9,11 @@ function calculateAgeInDays(){
     document.getElementById('flex-box-result').appendChild(h1);
 }
 
-function reset(){
-    document.getElementById('ageInDays').remove();
-}
+let reset = () => document.getElementById('ageInDays').remove()
 
 
 // CHALLENGE 2: CAT GENERATOR
-function generateCat(){
+let generateCat = () => {
     var img = document.createElement('img');
     img.setAttribute('src','https://sweetytextmessages.com/wp-content/uploads/2018/02/Funny-Cat-Gifs-for-Laugh-2.gif');
     img.setAttribute('alt','cat');
@@ -25,7 +23,7 @@ function generateCat(){
 
 
 // CHALLENGE 3: ROCK, PAPER, SCISSORS
-function rpsGame(yourChoice){
+let rpsGame = yourChoice =>{
     console.log(yourChoice)
     var humanChoice, botChoice;
     humanChoice = yourChoice.id;
@@ -38,15 +36,11 @@ function rpsGame(yourChoice){
     rpsFrontEnd(yourChoice.id, botChoice, message);
 }
 
-function randomToRpsInt(){
-    return Math.floor(Math.random()*3);
-}
+let randomToRpsInt = () => Math.floor(Math.random()*3)
 
-function numberToChoice(number){
-    return ['rock','paper','scissors'][number];
-}
+let numberToChoice = number => ['rock','paper','scissors'][number]
 
-function decideWinner(yourChoice, computerChoice){
+let decideWinner = (yourChoice, computerChoice) => {
     var rpsDatabase = {
         'rock':{'scissors':1, 'rock':0.5, 'paper':0},
         'paper':{'rock':1, 'paper':0.5, 'scissors':0},
@@ -59,7 +53,7 @@ function decideWinner(yourChoice, computerChoice){
     return [yourScore,computerScore];
 }
 
-function finalMessage([yourScore,computerScore]){
+let  finalMessage = ([yourScore,computerScore]) => {
     if(yourScore  === 0){
         return {'message':'You lost!','color':'red'};
     }else if(yourScore === 0.5){
@@ -70,7 +64,7 @@ function finalMessage([yourScore,computerScore]){
     }
 }
 
-function rpsFrontEnd(humanImageChoice, botImageChoice, finalMessage){
+let rpsFrontEnd = (humanImageChoice, botImageChoice, finalMessage) => {
     var imagesDatabase = {
         'rock': document.getElementById('rock').src,
         'paper': document.getElementById('paper').src,
