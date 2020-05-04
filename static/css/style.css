@@ -3,7 +3,7 @@
 .container-3,
 .container-4,
 .container-5{
-    border: 1px solid black;
+    border: 3px solid black;
     width: 75%;
     margin: 0 auto;
     text-align: center;
@@ -14,7 +14,6 @@
 .flex-box-pick-color,
 .flex-blackjack-row-1,.flex-blackjack-row-2,.flex-blackjack-row-3
 {
-    border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
@@ -23,7 +22,6 @@
 }
 
 .flex-box-container-1 div{
-    border: 1px solid black;
     padding: 10px;
     align-items: center;
 }
@@ -44,7 +42,6 @@
 }
 
 .flex-blackjack-row-1 div{
-    border: 1px solid black;
     flex: 1;
     padding: 10px;
     height: 350px;
@@ -57,13 +54,12 @@
 }
 
 .flex-blackjack-row-2 button,div{
-    border: 1px solid white;
     padding: 10px;
 }
 
 table,th,td{
     padding: 5px;
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 
