@@ -19,3 +19,10 @@
    * HTML,CSS + More focus on JS
    * User chooses from dropdown the final color of buttons
      ![Change button colors](/images/changeButtonColors.png)
+* **Challenge 5: Black Jack Game - Intermediate Level**
+   * HTML, CSS and JS methods/events
+   * General BlackJack game with following functionalities:
+	 * Hit(Player plays), Stand(System Plays) and Deal(Reset A round) functions
+	 * Display number of wins, losses and draws
+	 * Added some sound effects too
+     ![Black Jack Game](/images/blackjack.jpg)
