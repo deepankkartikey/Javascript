@@ -24,15 +24,15 @@ let generateCat = () => {
 
 // CHALLENGE 3: ROCK, PAPER, SCISSORS
 let rpsGame = yourChoice =>{
-    console.log(yourChoice)
+    // console.log(yourChoice)
     var humanChoice, botChoice;
     humanChoice = yourChoice.id;
     botChoice = numberToChoice(randomToRpsInt());
     results = decideWinner(humanChoice, botChoice); 
-    console.log('Computer choice: ', botChoice);
-    console.log(results);
+    // console.log('Computer choice: ', botChoice);
+    // console.log(results);
     message = finalMessage(results); //{'message':'You Won!','color':'green'}
-    console.log(message);
+    // console.log(message);
     rpsFrontEnd(yourChoice.id, botChoice, message);
 }
 
@@ -312,7 +312,7 @@ let computeWinner = () => {
     }
 
     result=`WINS: ${blackjackGame['wins']} LOSSES: ${blackjackGame['losses']} DRAWS: ${blackjackGame['draws']}`
-    console.log(result)
+    // console.log(result)
     return winner;
 }
         
