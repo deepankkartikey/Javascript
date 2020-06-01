@@ -2,7 +2,7 @@ export default class Snake {
     constructor(scene){
         this.scene = scene;
         this.lastMoveTime = 0;
-        this.moveInterval = 500;
+        this.moveInterval = 100;
         this.tilesize = 16;
         this.direction = Phaser.Math.Vector3.LEFT;
         this.body = [];
@@ -13,6 +13,7 @@ export default class Snake {
                         this.tilesize,this.tilesize,0xff0000)
             .setOrigin(0)
         );  
+
         this.apple = this.scene.add
                     .rectangle(0,0,this.tilesize,this.tilesize,0x00ff00)
                     .setOrigin(0)
@@ -31,16 +32,20 @@ export default class Snake {
         console.log(event);
         switch(event.keyCode){
             case 37: // left
-                this.direction = Phaser.Math.Vector3.LEFT;
+                if(this.direction !== Phaser.Math.Vector3.RIGHT)
+                    this.direction = Phaser.Math.Vector3.LEFT;
                 break;
             case 38: // up
-                this.direction = Phaser.Math.Vector3.UP;
+                if(this.direction !== Phaser.Math.Vector3.DOWN)
+                    this.direction = Phaser.Math.Vector3.UP;
                 break;
             case 39: // right
-                this.direction = Phaser.Math.Vector3.RIGHT;  
+                if(this.direction !== Phaser.Math.Vector3.LEFT)
+                    this.direction = Phaser.Math.Vector3.RIGHT;  
                 break;
             case 40: // down
-                this.direction = Phaser.Math.Vector3.DOWN;
+                if(this.direction !== Phaser.Math.Vector3.UP)
+                    this.direction = Phaser.Math.Vector3.DOWN;
                 break;
         }
     }
@@ -70,5 +75,21 @@ export default class Snake {
 
         this.body[0].x = x;
         this.body[0].y = y;
+
+        // Snake dies by going off-screen
+        if(this.body[0].x < 0 || 
+            this.body[0].x >= this.scene.game.config.width ||
+            this.body[0].y < 0 || 
+            this.body[0].y >= this.scene.game.config.height)
+            {
+                this.scene.scene.restart();
+             }
+             
+        // Snake dies by eating tail
+        let tail = this.body.slice(1);
+        if(tail.filter(s => s.x === this.body[0].x && s.y === this.body[0].y).length > 0){
+            this.scene.scene.restart();
+        }
+        
     }
 }
