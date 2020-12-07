@@ -8,3 +8,11 @@
         * Blackjack game
 * **Snake Game**
     * Beginner JS game using Phaser 3 library
+
+
+##### Most Common Programming cases
+
+* camelCase
+* kebab-case
+* snake_case
+* PascalCase
