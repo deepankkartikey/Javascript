@@ -30,3 +30,13 @@ console.log(stringWord, typeof stringWord)
 stringWord = Number(stringWord)
 console.log(stringWord, typeof stringWord)
 
+// parseInt() and parseFloat()
+let int = '24'
+console.log(int, typeof int)
+int = parseInt(int)
+console.log(int, typeof int)
+let flt = '24.5'
+console.log(flt, typeof flt)
+flt = parseFloat(flt)
+console.log(flt, typeof flt)
+
