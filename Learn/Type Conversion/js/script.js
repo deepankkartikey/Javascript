@@ -40,3 +40,12 @@ console.log(flt, typeof flt)
 flt = parseFloat(flt)
 console.log(flt, typeof flt)
 
+// .toFixed(n) : display 'n' decimal places
+console.log(flt.toFixed(10))
+
+console.log('Type Coercion')
+let strNum = '56345'
+let num = 34
+console.log(strNum + num)
+console.log(Number(strNum) + num)
+console.log(num + strNum)
