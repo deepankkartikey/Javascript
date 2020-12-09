@@ -16,3 +16,17 @@ console.log(arr, arr.length, typeof arr);
 arr = arr.toString()
 console.log(arr, arr.length, typeof arr);
 
+// Number()
+let stringNum = "3434";
+console.log(stringNum, typeof stringNum)
+stringNum = Number(stringNum)
+console.log(stringNum, typeof stringNum)
+let stringBool = false;
+console.log(stringBool, typeof stringBool)
+stringBool = Number(stringBool)
+console.log(stringBool, typeof stringBool)
+let stringWord = 'user';
+console.log(stringWord, typeof stringWord)
+stringWord = Number(stringWord)
+console.log(stringWord, typeof stringWord)
+
