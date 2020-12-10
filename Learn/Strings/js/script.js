@@ -25,3 +25,10 @@ console.log(html.slice(0,4));
 console.log(html.split(' '));
 
 console.log(html.replace('A','The'));
+
+
+// Template Literals
+let my = `Hello ${name},
+From A Template literal`
+console.log(my)
+document.body.innerHTML = my
