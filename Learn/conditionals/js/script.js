@@ -8,3 +8,12 @@ if (age == 24) {
 } else {
   console.log(`Age greater than 24`);
 }
+
+let currentAge = 19;
+if (currentAge > 18 && currentAge < 20) {
+  console.log(`Eligible for Vehicular License but not Commercial License`);
+} else if (currentAge > 20) {
+  console.log(`Eligible for Commercial License`);
+} else {
+  console.log(`NOT Eligible for License`);
+}
