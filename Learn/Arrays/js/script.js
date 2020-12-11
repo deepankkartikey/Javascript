@@ -20,3 +20,13 @@ console.log('Splice (Remove j elements from ith index): ', marks.splice(1,2), ma
 console.log('Reverse: ',marks.reverse());
 
 console.log('Concat(): ',marks.concat(marks));
+
+
+// Objects in JS
+let myobj = {
+    'first name': 'Deepank',
+    age: 24,
+    marks: [56,45]
+}
+console.log(myobj);
+console.log(myobj.marks);
