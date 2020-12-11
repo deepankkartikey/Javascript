@@ -19,3 +19,13 @@ if (currentAge > 18 && currentAge < 20) {
 }
 
 console.log(age==45 ? `Age is 45`: `Age is NOT 45`);
+
+
+let choice = `c`;
+switch(choice){
+    case 'a': console.log(`Selected A`);
+    break;
+    case 'b': console.log(`Selected b`);
+    break;
+    default: console.log(`Default Case`);
+}
