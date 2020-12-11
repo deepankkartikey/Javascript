@@ -17,3 +17,5 @@ if (currentAge > 18 && currentAge < 20) {
 } else {
   console.log(`NOT Eligible for License`);
 }
+
+console.log(age==45 ? `Age is 45`: `Age is NOT 45`);
