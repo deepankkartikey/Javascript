@@ -18,3 +18,9 @@ do {
   console.log(k);
   k++;
 } while (k < 5);
+
+// forEach
+let elements = [34,56,78,98,45];
+elements.forEach(function(element){
+    console.log(element);
+})
