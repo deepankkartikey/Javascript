@@ -24,3 +24,14 @@ let elements = [34,56,78,98,45];
 elements.forEach(function(element){
     console.log(element);
 })
+
+// for-in
+let myObj = {
+    name: 'Deepank',
+    age: '24',
+    os : 'windows'
+}
+
+for(let key in myObj){
+    console.log(`${key} : ${myObj[key]}`)
+}
