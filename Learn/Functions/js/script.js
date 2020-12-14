@@ -23,3 +23,8 @@ const myObj = {
   },
 };
 console.log(myObj.name());
+
+let fruits = ["banana", "orange", "kiwi"];
+fruits.forEach(function (element, index, array) {
+  console.log(element, index);
+});
