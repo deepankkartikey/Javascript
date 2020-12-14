@@ -14,3 +14,12 @@ function greet(name = "Bot") {
 greet("Deepank");
 greet("Arun");
 greet();
+
+// function inside object
+const myObj = {
+  type: "Game-Console",
+  name: function () {
+    return "PS5";
+  },
+};
+console.log(myObj.name());
