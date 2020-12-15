@@ -14,4 +14,8 @@ a = scrollY;
 a = window.history;
 //a = history.go(1);
 
+a = location;
+a = location.toString();
+// location.href = 'http://google.com';
+
 console.log(a);
