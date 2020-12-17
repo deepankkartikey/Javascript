@@ -23,3 +23,11 @@ sel = document.querySelector('div');  // only first div is selected
 sel.style.color = 'green'; 
 console.log(sel);
 
+
+// 2. MULTI ELEMENT SELCTOR
+let elems = document.getElementsByClassName('child');
+console.log(elems);
+
+Array.from(elems).forEach(function(elem){
+    elem.style.color = 'red';
+});
