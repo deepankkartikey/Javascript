@@ -19,3 +19,13 @@ NODE TYPE
 9. document
 10. docType
 */
+
+let container = document.querySelector('div.container');
+let c = container.children;
+let c1 = c[1].children[0].children;
+c1 = container.firstChild;
+c1 = container.firstElementChild;
+c1 = container.lastChild;
+c1 = container.lastElementChild;
+c1 = container.children;
+c1 = container.childElementCount; // count of child elements
