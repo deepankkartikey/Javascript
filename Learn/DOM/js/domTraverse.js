@@ -29,3 +29,8 @@ c1 = container.lastChild;
 c1 = container.lastElementChild;
 c1 = container.children;
 c1 = container.childElementCount; // count of child elements
+
+c1 = container.firstElementChild.parentElement;
+c1 = container.firstElementChild.nextElementSibling;
+c1 = container.firstElementChild.nextElementSibling.nextElementSibling;
+console.log(c1);
