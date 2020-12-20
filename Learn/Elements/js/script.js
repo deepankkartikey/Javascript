@@ -13,3 +13,13 @@ let ul = document.querySelector('ul.this');
 ul.appendChild(element);
 console.log(ul);
 console.log(element);
+
+
+// Replacing element
+let elem2 = document.createElement('h3');
+textNode = document.createTextNode('This is Text Node of elem2');
+elem2.id = 'elem2';
+elem2.classname = 'elem2';
+elem2.appendChild(textNode);
+element.replaceWith(elem2);
+console.log(elem2);
