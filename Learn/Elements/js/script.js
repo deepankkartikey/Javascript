@@ -28,3 +28,7 @@ console.log(elem2);
 let myul = document.querySelector('#myul');
 myul.replaceChild(element,document.getElementById('firstLi'));
 console.log(myul);
+
+// Removing element
+myul.removeChild(document.querySelector('#lastLi'));
+console.log(myul);
