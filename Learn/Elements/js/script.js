@@ -23,3 +23,8 @@ elem2.classname = 'elem2';
 elem2.appendChild(textNode);
 element.replaceWith(elem2);
 console.log(elem2);
+
+// Replacing child element
+let myul = document.querySelector('#myul');
+myul.replaceChild(element,document.getElementById('firstLi'));
+console.log(myul);
