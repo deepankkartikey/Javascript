@@ -13,3 +13,20 @@ function(e) {
   c = e.clientY;
   console.log(c);
 });
+
+// More Events
+let btn = document.querySelector('#btn');
+btn.addEventListener('click', func1);
+btn.addEventListener('dblclick', func2);
+
+function func1(e) {
+    console.log("Single-Click" ,e);
+    e.preventDefault();
+}
+
+function func2(e) {
+    console.log("Double-Click" ,e);
+    e.preventDefault();
+}
+
+
