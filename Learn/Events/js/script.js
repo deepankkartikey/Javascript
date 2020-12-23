@@ -30,3 +30,7 @@ function func2(e) {
 }
 
 
+document.querySelector('.container').addEventListener('mousemove', 
+function (e) {
+    document.body.style.backgroundColor = `rgb(${e.offsetX},${e.offsetY},154)`;
+})
