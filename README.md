@@ -7,7 +7,7 @@
 
 #### Scope of variables
 
-* let/const has block level scope
+* let or const has block level scope
 * var has function level scope - **global**
 
 #### Collection Of JavaScript Work
