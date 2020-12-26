@@ -4,6 +4,6 @@ let resultSet = document.links;
 
 Array.from(resultSet).forEach(function(element){
     if(!element.href.includes('google')){
-        console.log(element);
+        console.log(element.href);
     }
 })
