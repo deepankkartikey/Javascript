@@ -17,3 +17,11 @@ veg = JSON.parse(localStorage.getItem('veg'));
 console.log(veg);
 
 
+// Session storage
+// As soon as browser is closed session storage gets cleared
+sessionStorage.setItem('sessionName','Deepank');
+sessionStorage.setItem('sessionName2','Kartikey');
+sessionStorage.setItem('sessionveg',JSON.stringify(veg));
+
+console.log(sessionStorage);
+
