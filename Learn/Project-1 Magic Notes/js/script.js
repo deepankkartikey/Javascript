@@ -22,7 +22,7 @@ addNote.addEventListener("click", function (e) {
 // show elements from local storage
 function showNotes() {
   let notes = localStorage.getItem("notes");
-  console.log(notes);
+  // console.log(notes);
   if (notes != null) {
     notesObj = JSON.parse(notes);
   }
@@ -50,7 +50,7 @@ function showNotes() {
 
 // To delete note
 function deleteNote(index) {
-  console.log(`Delete Button ${index} clicked`);
+  // console.log(`Delete Button ${index} clicked`);
   let notes = localStorage.getItem("notes");
   if (notes != null) {
     notesObj = JSON.parse(notes);
@@ -64,7 +64,6 @@ function deleteNote(index) {
 let search = document.getElementById("searchTxt");
 search.addEventListener("input", function () {
   let searchTxt = search.value.toLowerCase();
-  console.log(searchTxt);
   let noteCards = document.getElementsByClassName("notecard");
   Array.from(noteCards).forEach(function (noteCard) {
     let note = noteCard.getElementsByTagName("p")[0].innerText.toLowerCase();
