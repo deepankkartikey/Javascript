@@ -19,7 +19,6 @@ addNote.addEventListener("click", function (e) {
   showNotes();
 });
 
-
 // show elements from local storage
 function showNotes() {
   let notes = localStorage.getItem("notes");
@@ -35,7 +34,7 @@ function showNotes() {
         <div class="card-body">
             <h5 class="card-title">Note ${index + 1}</h5>
             <p class="card-text">${element}</p>
-            <button class="btn btn-danger">Delete</button>
+            <button class="btn btn-danger" id="${index}" onclick="deleteNote(this.id)">Delete</button>
         </div>
     </div>
     `;
@@ -48,3 +47,35 @@ function showNotes() {
     notesElem.innerHTML = `No Notes added!`;
   }
 }
+
+// To delete note
+function deleteNote(index) {
+  console.log(`Delete Button ${index} clicked`);
+  let notes = localStorage.getItem("notes");
+  if (notes != null) {
+    notesObj = JSON.parse(notes);
+  }
+  notesObj.splice(index, 1);
+  localStorage.setItem("notes", JSON.stringify(notesObj));
+  showNotes();
+}
+
+// search functionality for notes app
+let search = document.getElementById("searchTxt");
+search.addEventListener("input", function () {
+  let searchTxt = search.value.toLowerCase();
+  console.log(searchTxt);
+  let noteCards = document.getElementsByClassName("notecard");
+  Array.from(noteCards).forEach(function (noteCard) {
+    let note = noteCard.getElementsByTagName("p")[0].innerText.toLowerCase();
+    // console.log('Note: ',note);
+    // console.log('Search: ',searchTxt);
+    if (note.includes(searchTxt)) {
+      //console.log(noteCard);
+      noteCard.style.display = "block";
+    } else {
+      //console.log('No match!')
+      noteCard.style.display = "none";
+    }
+  });
+});

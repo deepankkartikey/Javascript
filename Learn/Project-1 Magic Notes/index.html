@@ -26,7 +26,7 @@
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control me-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
@@ -40,7 +40,7 @@
                 <div class="form-floating">
                     <textarea class="form-control" placeholder="Leave a comment here" id="addTxt"
                         style="height: 100px; margin-bottom: 5px;"></textarea>
-                    <label for="floatingTextarea2">Comments</label>
+                    <label for="floatingTextarea2"></label>
                 </div>
                 <button id="addBtn" class="btn btn-primary">Add Note</button>
             </div>
@@ -51,8 +51,6 @@
         <div id="notes" class="row container-fluid">
         </div>
     </div>
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
         integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
