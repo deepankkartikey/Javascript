@@ -26,7 +26,8 @@
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <input class="form-control me-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control me-2" id="searchTxt" type="search" placeholder="Search"
+                        aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
@@ -34,15 +35,16 @@
     </nav>
 
     <div class="container my-3">
-        <div class="card" style="">
+        <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Add a Note</h5>
-                <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="addTxt"
-                        style="height: 100px; margin-bottom: 5px;"></textarea>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="addTitle" placeholder="Note Title" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group">
+                    <textarea class="form-control" placeholder="Note Description" id="addTxt"></textarea>
                     <label for="floatingTextarea2"></label>
                 </div>
-                <button id="addBtn" class="btn btn-primary">Add Note</button>
+                <button id="addBtn" class="btn btn-primary" style="margin-top: 15px;">Add Note</button>
             </div>
         </div>
         <hr>
