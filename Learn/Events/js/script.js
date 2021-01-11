@@ -1,7 +1,6 @@
 console.log("EVENTS IN JS");
 
-document.getElementById("heading").addEventListener("mouseover", 
-function(e) {
+document.getElementById("heading").addEventListener("mouseover", function (e) {
   console.log("This is a heading");
   let c;
   c = e.target;
@@ -15,22 +14,22 @@ function(e) {
 });
 
 // More Events
-let btn = document.querySelector('#btn');
-btn.addEventListener('click', func1);
-btn.addEventListener('dblclick', func2);
+let btn = document.querySelector("#btn");
+btn.addEventListener("click", func1);
+btn.addEventListener("dblclick", func2);
 
 function func1(e) {
-    console.log("Single-Click" ,e);
-    e.preventDefault();
+  console.log("Single-Click", e);
+  e.preventDefault();
 }
 
 function func2(e) {
-    console.log("Double-Click" ,e);
-    e.preventDefault();
+  console.log("Double-Click", e);
+  e.preventDefault();
 }
 
-
-document.querySelector('.container').addEventListener('mousemove', 
-function (e) {
+document
+  .querySelector(".container")
+  .addEventListener("mousemove", function (e) {
     document.body.style.backgroundColor = `rgb(${e.offsetX},${e.offsetY},154)`;
-})
+  });
