@@ -17,18 +17,18 @@ arr = arr.toString()
 console.log(arr, arr.length, typeof arr);
 
 // Number()
-let stringNum = "3434";
+let stringNum = "ABC";
 console.log(stringNum, typeof stringNum)
 stringNum = Number(stringNum)
 console.log(stringNum, typeof stringNum)
 let stringBool = false;
-console.log(stringBool, typeof stringBool)
+console.log("BOOL",stringBool, typeof stringBool)
 stringBool = Number(stringBool)
 console.log(stringBool, typeof stringBool)
 let stringWord = 'user';
 console.log(stringWord, typeof stringWord)
 stringWord = Number(stringWord)
-console.log(stringWord, typeof stringWord)
+console.log("this", stringWord, typeof stringWord)
 
 // parseInt() and parseFloat()
 let int = '24'
