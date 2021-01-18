@@ -20,7 +20,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Hogward's Library</a>
@@ -60,7 +60,7 @@
         </div>
     </nav>
     <div class="container my-3">
-        <form>
+        <form id="libraryForm">
             <div class="form-group row">
                 <label for="bookName" class="col-sm-2 col-form-label">Name</label>
                 <div class="col-sm-10">
@@ -101,7 +101,7 @@
             </fieldset>
             <div class="form-group row">
                 <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Add Book</button>
+                    <button type="submit" class="btn btn-primary" id="addBook">Add Book</button>
                 </div>
             </div>
         </form>
@@ -111,19 +111,13 @@
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
-                        <th scope="col">#</th>
                         <th scope="col">Book Name</th>
                         <th scope="col">Author</th>
                         <th scope="col">Genre</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
+                <tbody id='tableBody'>
+
                 </tbody>
             </table>
         </div>
