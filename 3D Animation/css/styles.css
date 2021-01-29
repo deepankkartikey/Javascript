@@ -39,6 +39,7 @@ transform-style: preserve-3d;
 .product img {
   width: 20rem;
   z-index: 2;
+  transition: all 0.75s ease-out;
 }
 
 .circle {
@@ -60,6 +61,7 @@ transform-style: preserve-3d;
 
 .info h1 {
   font-size: 3rem;
+  transition: all 0.75s ease-out;
 }
 
 .info h3 {
@@ -67,6 +69,7 @@ transform-style: preserve-3d;
   padding: 2rem 0rem;
   color: #585858;
   font-weight: lighter;
+  transition: all 0.75s ease-out;
 }
 
 .sizes {
@@ -84,6 +87,7 @@ transform-style: preserve-3d;
     font-weight: bold;
     color: #585858;
     margin: 1rem;
+    transition: all 0.75s ease-out;
 }
 
 button.active {
@@ -101,4 +105,5 @@ button.active {
     border-radius: 30px;
     font-weight: bolder;
     margin: 1rem;
+    transition: all 0.75s ease-out;
 }
