@@ -19,7 +19,7 @@ xhr.onload = function () {
     // console.log(json);
     let articles = json.articles;
     for (let news of articles) {
-      // console.log(news);
+      console.log(news);
       let string = `      
 <div id="news">
 <button
