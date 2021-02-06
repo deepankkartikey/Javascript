@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RegEx</title>
+  </head>
+  <body>
+    <h1>Regular Expression</h1>
+    <ol>
+      <li>
+        Flags on RegEx
+        <ol>
+          <li>g - global flag</li>
+          <li>i - case-insensitive flag</li>
+        </ol>
+      </li>
+      <br />
+      <li>
+        regex.EXEC(string)
+        <ol>
+          <li>Returns match else null for no match</li>
+          <li>
+            without global flag "/g", exec() returns first occurence index only
+          </li>
+        </ol>
+      </li>
+      <br />
+      <li>
+        regex.TEST(string)
+        <ol>
+          <li>Returns TRUE if regex found in string else returns FALSE</li>
+        </ol>
+      </li>
+      <br />
+      <li>
+        string.MATCHES(regex)
+        <ol>
+          <li>Matches string for regex and returns Array or Null</li>
+        </ol>
+      </li>
+      <br />
+      <li>
+        string.SEARCH(regex)
+        <ol>
+          <li>Returns index of first match or -1</li>
+        </ol>
+      </li>
+      <br />
+      <li>
+        string.REPLACE(regex,replacement_string)
+        <ol>
+          <li>Replaces occurence of regex by replacement_string</li>
+          <li>Replaces all occurences if /g used with Regex</li>
+          <li>If /g Not used, only first occurence is replaced</li>
+        </ol>
+      </li>
+    </ol>
+    <script src="script.js"></script>
+  </body>
+</html>
