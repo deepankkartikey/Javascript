@@ -27,4 +27,19 @@ console.log("String occurences in Regex: ", res);
 res = s.search(regex);
 console.log("Index of String occurence in Regex: ", res);
 res = s.replace(regex, "SHUBH");
-console.log(res);
+console.log("s.replace(regex, \"SHUBH\"): ", res);
+
+
+// META-CHARACTERS
+regex = /deepnk/;
+regex = /^deep/;    // '^' means regex will match if string starts with 
+regex = /ak$/;      // '$' means regex will match if string ends with
+regex = /d*k/;      // '*' matches 0 or more characters
+regex = /de.pank/;  // '.' matches exactly one character
+regex = /deepan?k/  // '?' makes character preceeded by it, optional 
+s = "deepank is deepank and not depak";
+if(regex.test(s)){
+    console.log(`${regex} exists inside ${s}`);
+}else{
+    console.log(`${regex} DOESN'T exist inside ${s}`);
+}
