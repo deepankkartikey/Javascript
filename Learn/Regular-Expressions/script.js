@@ -69,11 +69,38 @@ console.error("QUANTIFIERS");
 let regEx1 = /de{0,2}pank/; // e can occur 0 or 2 times
 regEx1 = /de{2}pank/; // e can occur exactly 2 times
 
-
 // Grouping - ()
 regEx1 = /(dee){2}/; // look for 2 occurences of grouping (dee)
 tstStr = "deedee";
 
+result = regEx1.exec(tstStr);
+console.log("regEx1.exec(tstStr):", result);
+if (result) {
+  console.log(`${regEx1.source} present in ${tstStr}`);
+} else {
+  console.log(`${regEx1.source} NOT in ${tstStr}`);
+}
+
+regEx1 = /^(a|e|i|o|u).*\1$/;
+tstStr = "abcca";
+console.log(regEx1.exec(tstStr));
+
+// Shorthand Character Classes
+console.error("Shorthand Character classes");
+
+regEx1 = /\wee/; // \w - word charcaters: one underscores, alphabets or numbers
+tstStr = "dee   45dee123&^%z";
+regEx1 = /\w+23/; // \w - any number of word characters followed by 23
+regEx1 = /\Wdee/; // \W - One Non Word character
+regEx1 = /\W+z/; // \W+ - more than Non Word Character
+regEx1 = /\d3/; // \d - match single digit followed by 3
+regEx1 = /\d+3/; // \d - match multiple digits followed by 3
+regEx1 = /\D12/; // \D - One non digit character followed by 12
+regEx1 = /\D+12/; // \D - Mutiple non-digits followed by 12
+regEx1 = /\s45/; // \s- single white space character
+regEx1 = /\s+45/; // \s - multiple white space characters
+regEx1 = /\S12/; // \S - single non-white space characters
+regEx1 = /\S+12/; // multiple non white space characters followed by 12
 result = regEx1.exec(tstStr);
 console.log("regEx1.exec(tstStr):", result);
 if (result) {
