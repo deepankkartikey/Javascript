@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Welcome</title>
+</head>
+
+<body>
+    <div id="success" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!</strong> Your Travel request has been successfully submitted. 😊
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div class="container">
+        <h1>Travel Desk</h1>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter you Name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="text" class="form-control" id="email" placeholder="Enter you Email">
+            </div>
+            <div class="mb-3">
+                <label for="car" class="form-label">Select Car</label>
+                <select class="form-control" id="car" name="car">
+                    <option>Omni</option>
+                    <option>Alto</option>
+                    <option>Swift</option>
+                    <option>Ignis</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <textarea class="form-control" id="address" name="address" placeholder="Enter your Address" rows="5" cols="30"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Password</label>
+                <input type="text" class="form-control" id="phone" class="phone">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-check-label" for="message">Any Other message ...</label>
+                <input type="text" class="form-control" id="message">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
