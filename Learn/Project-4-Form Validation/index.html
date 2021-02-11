@@ -20,12 +20,13 @@
         <h1>Travel Desk</h1>
         <form>
             <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter you Name">
+                <label for="name" class="form-label">Username</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your Username">
+                <div class="invalid-feedback">Username shouldn't start with a digit and should be 6 to max. 10 characters long</div>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
-                <input type="text" class="form-control" id="email" placeholder="Enter you Email">
+                <input type="text" class="form-control" id="email" placeholder="Enter your Email">
             </div>
             <div class="mb-3">
                 <label for="car" class="form-label">Select Car</label>
@@ -37,11 +38,11 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label for="address" class="form-label">Address</label>
+                <label for="address" class="form-label">Enter your permanent address</label>
                 <textarea class="form-control" id="address" name="address" placeholder="Enter your Address" rows="5" cols="30"></textarea>
             </div>
             <div class="mb-3">
-                <label for="phone" class="form-label">Password</label>
+                <label for="phone" class="form-label">Enter your contact details</label>
                 <input type="text" class="form-control" id="phone" class="phone">
             </div>
 
