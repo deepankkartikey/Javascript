@@ -101,6 +101,7 @@ regEx1 = /\s45/; // \s- single white space character
 regEx1 = /\s+45/; // \s - multiple white space characters
 regEx1 = /\S12/; // \S - single non-white space characters
 regEx1 = /\S+12/; // multiple non white space characters followed by 12
+regEx1 = /e+\b/; // Word boundary
 result = regEx1.exec(tstStr);
 console.log("regEx1.exec(tstStr):", result);
 if (result) {
@@ -108,3 +109,13 @@ if (result) {
 } else {
   console.log(`${regEx1.source} NOT in ${tstStr}`);
 }
+
+// Assertions
+console.error("Assertions");
+regEx = /d(?=a)/;
+tstStr = "dee   k45dee123&^%z";
+result = regEx1.exec(tstStr);
+console.log("regEx1.exec(tstStr):", result);
+
+
+
