@@ -16,7 +16,8 @@ uname.addEventListener("blur", () => {
   if (regex.test(username)) {
     //console.log("Username Valid");
     isValidName = true;
-    uname.classList.replace("is-invalid", "is-valid");
+    uname.classList.remove("is-invalid");
+    uname.classList.add("is-valid");
   } else {
     console.warn("Invalid Username");
     uname.classList.add("is-invalid");
@@ -31,7 +32,8 @@ email.addEventListener("blur", () => {
   //console.log(regex.exec(emailValue));
   if (regex.test(emailValue)) {
     isValidEmail = true;
-    email.classList.replace("is-invalid", "is-valid");
+    email.classList.remove("is-invalid");
+    email.classList.add("is-valid");
   } else {
     console.warn("Email is invalid");
     email.classList.add("is-invalid");
@@ -45,7 +47,8 @@ phone.addEventListener("blur", () => {
   let phoneNumber = phone.value;
   if (regex.test(phoneNumber)) {
     isValidPhone = true;
-    phone.classList.replace("is-invalid", "is-valid");
+    phone.classList.remove("is-invalid");
+    phone.classList.add("is-valid");
   } else {
     console.warn("Invalid Phone Number");
     phone.classList.add("is-invalid");
@@ -59,7 +62,8 @@ submit.addEventListener("click", (event) => {
   successAction.classList.add("alert", "show");
   successAction.innerHTML = ``;
   if (isValidName && isValidEmail && isValidPhone) {
-    successAction.classList.replace("alert-danger", "alert-success");
+    successAction.classList.remove("alert-danger");
+    successAction.classList.add("alert-success");
     successAction.innerHTML = `<strong>Success!</strong> Your Travel request has been successfully submitted. 😊`;
   } else {
     successAction.classList.add("alert-danger");
