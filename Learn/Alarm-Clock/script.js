@@ -13,15 +13,20 @@ clock.addEventListener("click", () => {
   alarm.classList.remove("d-none");
 });
 
-alarmBtn.addEventListener("click", () => {
+alarmBtn.addEventListener("click", setAlarm);
+
+function setAlarm() {
   const alarmDate = new Date(alarmInput.value);
   const now = Date.now();
-  //console.log(`Alarm set for ${alarmDate}`);
-  let timeDiff = now-alarmDate;
-  if(timeDiff>0){
+  console.log(`Alarm set for ${alarmDate}`);
+  let timeDiff = now - alarmDate;
+  console.log(timeDiff);
+  if (timeDiff >= 0) {
+    setTimeout(() => {
       audio.play();
+    }, timeDiff);
   }
-});
+}
 
 snoozeBtn.addEventListener("click", () => {
   audio.pause();
