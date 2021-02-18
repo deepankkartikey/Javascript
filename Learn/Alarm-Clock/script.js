@@ -15,16 +15,22 @@ clock.addEventListener("click", () => {
 
 alarmBtn.addEventListener("click", setAlarm);
 
-function setAlarm() {
+function alarmGoOff() {
+  console.log(`Alarm going off ...`);
+  audio.play();
+}
+
+function setAlarm(e) {
+  e.preventDefault();
   const alarmDate = new Date(alarmInput.value);
   const now = Date.now();
   console.log(`Alarm set for ${alarmDate}`);
-  let timeDiff = now - alarmDate;
+  let timeDiff = alarmDate - now;
   console.log(timeDiff);
   if (timeDiff >= 0) {
     setTimeout(() => {
-      audio.play();
-    }, timeDiff);
+      alarmGoOff();
+    }, -timeDiff);
   }
 }
 
